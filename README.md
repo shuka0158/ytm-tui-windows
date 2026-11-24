@@ -21,12 +21,12 @@ mpv, ffmpeg and a JavaScript runtime are already inside the zip, so you do not i
 
 ### 1. Download and extract
 
-1. Download `ytm-tui-1.6.1-windows-x64.zip` from the [latest release](../../releases/latest).
-2. Right-click it, choose **Extract All…**, then **Extract**. You get a folder called `ytm-tui-1.6.1-windows-x64` with `ytm-tui.exe` directly inside it.
+1. Download `ytm-tui-1.6.2-windows-x64.zip` from the [latest release](../../releases/latest).
+2. Right-click it, choose **Extract All…**, then **Extract**. You get a folder called `ytm-tui-1.6.2-windows-x64` with `ytm-tui.exe` directly inside it.
 3. Move that folder somewhere simple, for example `C:\ytm-tui` (not inside `Program Files`).
 4. Keep every file in the folder together. `ytm-tui.exe` needs `mpv.exe`, `ffmpeg.exe`, `ffprobe.exe`, `deno.exe` and the `_internal` folder next to it.
 
-Optional: check the download against the SHA-256 on the release page (`Get-FileHash .\ytm-tui-1.6.1-windows-x64.zip` in PowerShell).
+Optional: check the download against the SHA-256 on the release page (`Get-FileHash .\ytm-tui-1.6.2-windows-x64.zip` in PowerShell).
 
 ### 2. First launch warnings
 
@@ -76,7 +76,7 @@ Everything except the Google sign-in can be done by an agent. Run these in **Pow
 ```powershell
 $ErrorActionPreference = "Stop"
 $ProgressPreference    = "SilentlyContinue"          # makes Invoke-WebRequest much faster
-$version  = "1.6.1"
+$version  = "1.6.2"
 $name     = "ytm-tui-$version-windows-x64.zip"
 $url      = "https://github.com/shuka0158/ytm-tui-windows/releases/download/v$version/$name"
 $sha256   = "c6f36e6aa6bc75640068f1a8bba840142e83cbb4b422e26de5314e7cebafeafc"
@@ -106,7 +106,7 @@ If the checksum differs, stop: the file was corrupted or is not the release desc
 
 ### 2. What success looks like
 
-`--version` prints `ytm-tui 1.6.1` and the licence notice. `doctor` should print:
+`--version` prints `ytm-tui 1.6.2` and the licence notice. `doctor` should print:
 
 ```
 mpv                 found
@@ -172,4 +172,4 @@ To remove everything, delete the `C:\ytm-tui` folder and `%APPDATA%\ytm-tui`. If
 
 ytm-tui is an unofficial client that uses private YouTube Music endpoints. It is not affiliated with, endorsed by, or supported by Google or YouTube. Use it with your own account, at your own risk.
 
-ytm-tui is free software under the [GNU GPL v3 or later](LICENSE), with **no warranty**. This build is version 1.6.1 with Windows-specific changes (mpv control over a named pipe, DevTools-based sign-in, file-based visualizer levels).
+ytm-tui is free software under the [GNU GPL v3 or later](LICENSE), with **no warranty**. This build is version 1.6.2 with Windows-specific changes (mpv control over a named pipe, DevTools-based sign-in, file-based visualizer levels).
